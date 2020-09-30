@@ -44,16 +44,16 @@
       background: #fff;
       box-shadow: 0 0 25px 0 #1c87c9;
       }
-     .banner {
-      position: relative;
-      height: 210px;
-      background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      }
+        .banner {
+            position: relative;
+            height: 210px;
+            background-image: url('/Images/Circuit-Banner.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
       .banner::after {
       content: "";
       background-color: rgba(0, 0, 0, 0.6);
@@ -196,9 +196,9 @@
     <div class="testbox">
         <form action="/">
             <div class="banner">
-                <h1>Job Application Form</h1>
+                <h1>Systems Access Request</h1>
             </div>
-            <p class="top-info">Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+            <p class="top-info">the form below is to request systems access. <br />Please fill out the form below completely.</p>
             <div class="item">
                 <p>Name<span class="required">*</span></p>
                 <div class="name-item">
@@ -208,12 +208,13 @@
             </div>
             <div class="contact-item">
                 <div class="item">
-                    <p>Email<span class="required">*</span></p>
-                    <input type="text" name="name" required />
+                    <p>Badge Number<span class="required">*</span></p>
+                    <input type="text" placeholder="Badge Number" id="numBadge" pattern="/d*" maxlength="6">
                 </div>
                 <div class="item">
-                    <p>Phone<span class="required">*</span></p>
-                    <input type="text" name="name" required />
+                    <p>Badge Expiration Date<span class="required">*</span></p>
+                    <input type="date" name="bdate" required />
+                    <i class="fas fa-calendar-alt"></i>
                 </div>
             </div>
             <div class="position-item">
@@ -227,14 +228,9 @@
                         <option value="5">Finley and Cook</option>
                     </select>
                 </div>
-                <div class="item">
-                    <p>Available start date<span class="required">*</span></p>
-                    <input type="date" name="bdate" required />
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
             </div>
             <div class="question">
-                <p>What is your current employment status?<span class="required">*</span></p>
+                <p>What systems are required?<span class="required">*</span></p>
                 <div class="question-answer">
                     <div>
                         <input type="radio" value="none" id="radio_1" name="status" required />
@@ -251,24 +247,6 @@
                     <div>
                         <input type="radio" value="none" id="radio_4" name="status" required />
                         <label for="radio_4" class="radio"><span>Student</span></label>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <p>Submit your resume by providing your resume URL or attach file:</p>
-                <input type="text" name="providing" />
-                <input type="file" name="file" accept="file/*">
-            </div>
-            <div class="question">
-                <p>Would you like to list references</p>
-                <div class="question-answer">
-                    <div>
-                        <input type="radio" value="none" id="radio_5" name="references" />
-                        <label for="radio_5" class="radio"><span>Yes</span></label>
-                    </div>
-                    <div>
-                        <input type="radio" value="none" id="radio_6" name="references" />
-                        <label for="radio_6" class="radio"><span>No</span></label>
                     </div>
                 </div>
             </div>
