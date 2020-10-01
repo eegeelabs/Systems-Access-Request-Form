@@ -209,7 +209,7 @@
             <div class="contact-item">
                 <div class="item">
                     <p>Badge Number<span class="required">*</span></p>
-                    <input type="text" placeholder="Badge Number" id="numBadge" pattern="/d*" maxlength="6">
+                    <input type="text" placeholder="Badge Number" id="numBadge" pattern="^[0-9]{1,6}$" maxlength="6">
                 </div>
                 <div class="item">
                     <p>Badge Expiration Date<span class="required">*</span></p>
@@ -230,28 +230,34 @@
                 </div>
             </div>
             <div class="question">
-                <p>What systems are required?<span class="required">*</span></p>
+                <p>Required additions?<span class="required">*</span></p>
                 <div class="question-answer">
                     <div>
-                        <input type="radio" value="none" id="radio_1" name="status" required />
-                        <label for="radio_1" class="radio"><span>Employed</span></label>
+                        <input type="checkbox" value="none" id="chkBox_1" name="status" />
+                        <label for="chkBox_1" class="custom-checkbox"><span>Email</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_2" name="status" required />
-                        <label for="radio_2" class="radio"><span>Self-Employed</span></label>
+                        <input type="checkbox" value="none" id="chkBox_2" name="status" />
+                        <label for="chkBox_2" class="custom-checkbox"><span>Cell Phone</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_3" name="status" required />
-                        <label for="radio_3" class="radio"><span>Unemployed</span></label>
+                        <input type="checkbox" value="none" id="chkBox_3" name="status" />
+                        <label for="chkBox_3" class="custom-checkbox"><span>Laptop</span></label>
                     </div>
                     <div>
-                        <input type="radio" value="none" id="radio_4" name="status" required />
-                        <label for="radio_4" class="radio"><span>Student</span></label>
+                        <input type="checkbox" value="none" id="chkBox_4" name="status" />
+                        <label for="chkBox_4" class="custom-checkbox"><span>Desk Extention</span></label>
                     </div>
+
+                    @*<input id="cb" type="checkbox" style="float: left; margin-top: 5px;>">
+                    <div style="margin-left: 25px;">
+                        I'm interested in an enhanced listing or premium profile,
+                        (a member of our team will respond promptly with further information)
+                    </div>*@
                 </div>
             </div>
             <div class="btn-block">
-                <button type="button" href="/">Apply For The Job</button>
+                <button type="button" href="/">Submit</button>
             </div>
         </form>
     </div>
